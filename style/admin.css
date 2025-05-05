@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+aside {
+    width: 250px;
+    height: 100vh;
+    background-color: #2845d6; 
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+aside h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.side-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-bar ul li {
+    margin: 10px 0;
+}
+
+.side-bar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.side-bar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.icons {
+    margin-right: 10px;
+}
+
+.top-bar {
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 250px;
+    border-bottom: 2px solid #e1e1e1;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.center-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-left: 235px;
+}
+
+.action-btns button {
+    margin-right: 5px;
+}
+
+.action-btns i{
+    cursor: pointer;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #2845d6; 
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-bar h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.search-box {
+    width: 250px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.action-btns a {
+    text-decoration: none;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-data {
+    max-height: 500px;
+    overflow-y: auto;
+} 
+
+.profile-icons{
+    margin-right: 5px;
+}
+
+.dashboard-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+    padding: 20px;
+    margin-left: 250px;
+    max-width: 800px;
+    border-radius: 12px;
+}
+
+.dashboard-card .card{
+    background: white; 
+    padding: 20px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.3s;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    height: 130px;
+    position: relative;
+}
+
+.dashboard-card .card .material-symbols-outlined {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #555;
+    color: black
+}
+
+.dashboard-card .card:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
