@@ -12,8 +12,6 @@
             <hr>
             <li><a href="pending.php"><span class="material-symbols-outlined icons">pending_actions</span>Pending</a>
             </li>
-            <hr>
-            <li><a href="#"><span class="material-symbols-outlined icons">notification_settings</span>Setting</a></li>
             <hr> 
             <li><a data-bs-toggle="modal" href="#" data-bs-target="#logout"><span class="material-symbols-outlined icons">logout</span>Log out</a></li>
         </ul>

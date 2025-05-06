@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($application) {
             // Check if applicant already exists in records
-            $check_query = "SELECT id FROM hsrecords WHERE name = ? AND status = 'active' OR status ='renewed'";
+            $check_query = "SELECT id FROM hsrecords WHERE name = ? AND status = 'active'";
             $check_stmt = $conn->prepare($check_query);
             $check_stmt->bind_param("s", $application['name']);
             $check_stmt->execute();
@@ -46,10 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             }
 
-            // ... existing code ...
+            // Prepare and execute the insert statement
             $insert_query = "INSERT INTO hsrecords (user_id, name, school, semester, gradelvl, strand, brgy, phone, status) 
                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active')";
-            // ... existing code ...
+            $insert_stmt = $conn->prepare($insert_query);
             $insert_stmt->bind_param(
                 "isssssss",
                 $application['user_id'],
@@ -61,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $application['address'],
                 $application['number']
             );
-            // ... existing code ...
             $insert_stmt->execute();
 
             // Send notification to the applicant
@@ -81,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $_SESSION['reminder'] = "Application not found.";
         }
-    } elseif (isset($_POST['reject'])) {
+    }  elseif (isset($_POST['reject'])) {
         // Handle rejection
         $rejection_message = $_POST['rejection_message'];
 

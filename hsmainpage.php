@@ -295,7 +295,7 @@ $user = $result->fetch_assoc();
 
                                 if ($result && mysqli_num_rows($result) > 0) {
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        echo '<option value="' . $row['name'] . '">' . htmlspecialchars($row['name']) . '</option>';
+                                        echo '<option value="' . $row['id'] . '">' . htmlspecialchars($row['name']) . '</option>';
                                     }
                                 } else {
                                     echo '<option value="" disabled>No records found</option>';

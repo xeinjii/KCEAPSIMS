@@ -32,7 +32,7 @@ if (isset($_SESSION['sts'])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./style/homepage.css">
     <link rel="icon" type="image/png" href="img/logo.png">
-    <title>Homepage — KCEAP Scholarship Management System</title>
+    <title>Homepage — KCEAP</title>
     
 </head>
     <style>

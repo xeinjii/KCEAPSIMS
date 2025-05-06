@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_POST['accept'])) {
         // Check if applicant already exists in records
-        $check_query = "SELECT id FROM records WHERE name = ? AND status = 'active' OR status = 'renewed'";
+        $check_query = "SELECT id FROM records WHERE name = ? AND status = 'active'";
         $check_stmt = $conn->prepare($check_query);
         $check_stmt->bind_param("s", $application['name']);
         $check_stmt->execute();
