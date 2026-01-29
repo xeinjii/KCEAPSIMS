@@ -1,24 +1,4 @@
-<?php
-include './config/config.php';
-session_start();
 
-if (isset($_SESSION['status'])) {
-    echo "<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var signupModal = new bootstrap.Modal(document.getElementById('signup'));
-            signupModal.show();
-        });
-    </script>";
-}
-if (isset($_SESSION['sts'])) {
-    echo "<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var loginModal = new bootstrap.Modal(document.getElementById('login'));
-            loginModal.show();
-        });
-    </script>";
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
